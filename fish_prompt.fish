@@ -56,12 +56,12 @@ end
 
 set -g _prompt_jobstatus_enabled 1
 set -g _prompt_jobstatus_backcolor black
-set -g _prompt_jobstatus_jobsglyph \u2699
+set -g _prompt_jobstatus_jobsglyph \u2699' '
 set -g _prompt_jobstatus_jobscolor cyan
 set -g _prompt_jobstatus_nojobsglyph ''
 set -g _prompt_jobstatus_nojobscolor cyan
 function _prompt_jobstatus -d "Show status of background jobs"
-    if [ $_prompt_sudostatus_enabled -gt 0 ]
+    if [ $_prompt_jobstatus_enabled -gt 0 ]
         if [ (jobs -l | wc -l) -gt 0 ]
             _prompt_segment $_prompt_jobstatus_backcolor $_prompt_jobstatus_jobscolor $_prompt_jobstatus_jobsglyph
         else if [ -n $_prompt_jobstatus_nojobsglyph ]
