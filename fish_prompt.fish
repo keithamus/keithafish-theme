@@ -20,10 +20,12 @@ function _prompt_segment -d "Function to draw a segment"
     if [ $_prompt_segment__color != "NONE" ]
         set_color $_prompt_segment__color -b $argv[1]
         echo -n $_prompt_segment_separatorglyph
+        set_color normal -b normal
     end
     set -g _prompt_segment__color $argv[1]
     set_color $argv[2] -b $argv[1]
     echo -n $argv[3]
+    set_color normal -b normal
 end
 set -g _prompt_segment_finishglyph ' '
 function _prompt_finish -d "Function to draw a segment"
