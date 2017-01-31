@@ -146,7 +146,7 @@ set -g _prompt_npm_backcolor 990000
 set -g _prompt_npm_color white
 function _prompt_npm -d "Show status of npm"
     if [ $_prompt_npm_enabled -gt 0 ]
-        set -l packagejson (findup package.json)
+        set -l packagejson (_findup package.json)
         if [ -n "$packagejson" ]
           set -l packagename (sed -n 's/.*"name": "\(.*\)",/\1/p' $packagejson | head -1)
           set -l packageversion (sed -n 's/.*"version": "\(.*\)",/\1/p' $packagejson | head -1)
