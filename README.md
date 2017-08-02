@@ -91,7 +91,7 @@ set -g _prompt_sudostatus_nosudocolor FF9000
 
 [mit]:            http://opensource.org/licenses/MIT
 [author]:         http://github.com/keithamus
-[contributors]:   https://github.com/keithamus/keithafish/graphs/contributors
+[contributors]:   https://github.com/keithamus/theme-keithafish/graphs/contributors
 [omf-link]:       https://www.github.com/oh-my-fish/oh-my-fish
 
 [license-badge]:  https://img.shields.io/badge/license-MIT-007EC7.svg?style=flat-square
